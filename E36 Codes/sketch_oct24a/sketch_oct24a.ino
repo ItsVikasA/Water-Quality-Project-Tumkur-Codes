@@ -22,10 +22,11 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sen0sors(&oneWire);
 
 DFRobot_ESP_EC ec;
-Adafruit_ADS1115 ads;    
+Adafruit_ADS1115 ads;
+
 float voltage, ecValue, temperature = 25;
 float tdsValue; // Variable to store TDS value in ppm
-String apiKey = "4ZR66YMA3DKE2Y0N"; // Enter your Write API key from ThingSpeak
+String apiKey = "W0L54FD34XOTI2WL"; // Enter your Write API key from ThingSpeak
 
 const char *ssid = "project"; // replace with your wifi ssid and wpa2 keyconst 
 char *pass = "Vikas@2005";

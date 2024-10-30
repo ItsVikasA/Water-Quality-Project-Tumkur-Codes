@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="text-center py-4 bg-primary text-white">
+            <h1 class="display-4">Smart Water Quality Monitoring</h1>
+            <p class="lead">Real-time data analysis and visualization</p>
+        </header>
+
+        <div class="row">
+            <nav class="col-md-3 sidebar">
+                <h4>Navigation</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="#visualization">Data Visualization</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#alerts">Alerts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dataset">Dataset</a></li>
+                </ul>
+            </nav>
+
+            <main class="col-md-9">
+                <section id="visualization" class="my-4">
+                    <h2>Data Visualization</h2>
+                    <iframe src="http://localhost:8501" class="embed-responsive-item"></iframe>
+                    <canvas id="myChart" class="graph-container"></canvas>
+                </section>
+
+                <section id="alerts" class="my-4">
+                    <h2>Alerts</h2>
+                    <div id="alertList" class="alert-container"></div>
+                </section>
+
+                <section id="dataset" class="my-4">
+                    <h2>Dataset</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>pH</th>
+                                    <th>Hardness</th>
+                                    <th>Solids</th>
+                                    <th>Conductivity</th>
+                                    <th>Turbidity</th>
+                                    <th>Potability</th>
+                                </tr>
+                            </thead>
+                            <tbody id="datasetBody">
+                                <!-- Data will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="text-center py-3 bg-light">
+            <p>&copy; 2024 Water Quality Monitoring. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <div class="water-animation"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
